@@ -37,15 +37,15 @@ device = ssd1306(serial)
 # other bitmap fonts you can try
 # from www.dafont.com
 #
-# font=ImageFont.truetype('/home/pi/fonts/Volter__28Goldfish_29.ttf', 9)
-# font=ImageFont.truetype('/home/pi/fonts/Squarewave.ttf', 16)
-# font=ImageFont.truetype('/home/pi/fonts/RetroGaming.ttf', 11)
-# font=ImageFont.truetype('/home/pi/fonts/PokemonClassic.ttf', 8)
-# font=ImageFont.truetype('/home/pi/fonts/pixelade.ttf', 13)
-# font=ImageFont.truetype('/home/pi/fonts/new-gen.ttf', 9)
-# font=ImageFont.truetype('/home/pi/fonts/CodersCrux.ttf', 16)
-# font=ImageFont.truetype('/home/pi/fonts/Minecraftia-Regular.ttf', 8)
-font=ImageFont.truetype('/home/pi/fonts/PixelOperator.ttf', 16)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/Volter__28Goldfish_29.ttf', 9)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/Squarewave.ttf', 16)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/RetroGaming.ttf', 11)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/PokemonClassic.ttf', 8)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/pixelade.ttf', 13)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/new-gen.ttf', 9)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/CodersCrux.ttf', 16)
+# font=ImageFont.truetype('/home/pi/oled1090/fonts/Minecraftia-Regular.ttf', 8)
+font=ImageFont.truetype('/home/pi/oled1090/fonts/PixelOperator.ttf', 16)
 
 # wait a while for dump1090 to start
 time.sleep(30)
