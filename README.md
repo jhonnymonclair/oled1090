@@ -70,9 +70,9 @@ Install LUMA Oled Library
 
 ```
 sudo apt-get update
-sudo apt-get python3-pil
-sudo apt-get python3-pip
-sudo -H pip install --upgrade luma.oled
+sudo apt-get install python3-pil
+sudo apt-get install python3-pip
+sudo -H pip3 install --upgrade luma.oled
 ```
 
 
