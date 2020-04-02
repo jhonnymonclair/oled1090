@@ -16,6 +16,8 @@ Oled1090 reads Dump1090 data at intervals, if it finds an aircraft trespassing a
 sends info on upper part of display for as long as the aircraft flights in the area. At same time, it keeps trace of the
 farthest received aircraft on the lower part of display.
 
+![Oled1090 Output](https://raw.githubusercontent.com/jhonnymonclair/oled1090/master/SSD1306.jpg)
+
 Tipically the program is installed on the same Raspberry running Dump1090 but nothing prevents you from install
 it on a different one, just take care to set the correct url in program according to that.   
 
