@@ -19,8 +19,7 @@ farthest received aircraft on the lower part of display.
 Tipically the program is installed on the same Raspberry running Dump1090 but nothing prevents you from install
 it on a different one, just take care to set the correct url in program according to that.   
 
-Note: Oled1090 processes ADS-B data (no MLAT) and only for aicrafts transmitting identity and position (lat,lon)
-because it relies just on the Aicraft.Json locally produced by Dump1090, there isn't any else involved database.
+Note: Oled1090 processes only aicrafts transmitting identity and position (lat,lon), it relies just on the Aicraft.Json locally produced by Dump1090, there isn't any else involved database.
 
 The following step-by-step guide has been written on the base of a Raspbian Buster Lite installation.
 Different version of Raspbian may or may not satisfy all required dependencies.
