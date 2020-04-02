@@ -71,7 +71,7 @@ while True:
     line1 = "proximity: " + str(proximity) + "Km "
     line2 = "scanning..."
     for iter in range(no_of_aircrafts):
-        if "lat" in data['aircraft'][iter] and "flight" in data['aircraft'][iter]:
+        if "lat" in data['aircraft'][iter]:
             # calculate distance
             lat1 = radians(data['aircraft'][iter]['lat'])
             lon1 = radians(data['aircraft'][iter]['lon'])
@@ -93,13 +93,29 @@ while True:
                 record = distance
                 now = datetime.now()
                 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-                line3 = str(data['aircraft'][iter]['flight']) + " " + str(data['aircraft'][iter]['alt_baro']) + "Ft"
+                if "flight" in data['aircraft'][iter]:
+                    plane = data['aircraft'][iter]['flight']
+                else:
+                    plane = data['aircraft'][iter]['hex']
+                if "alt_baro" in data['aircraft'][iter]:
+                    altitude = str(data['aircraft'][iter]['alt_baro'])
+                else:
+                    altitude = "..."
+                line3 = plane + " " + altitude + "Ft"
                 line4 = str('%0.1fKm / %0.1fMi' %(distance,miles))
                 line5 = dt_string
     if len(proxlist) > 0:
         proxlist.sort()
         ind = proxlist[0][2]
-        line1 = str(data['aircraft'][ind]['flight']) + " " + str(data['aircraft'][ind]['alt_baro']) + "Ft"
+        if "flight" in data['aircraft'][ind]:
+            plane = data['aircraft'][ind]['flight']
+        else:
+            plane = data['aircraft'][ind]['hex']
+        if "alt_baro" in data['aircraft'][ind]:
+            altitude = str(data['aircraft'][ind]['alt_baro'])
+        else:
+            altitude = "..."
+        line1 = plane + " " + altitude + "Ft"
         line2 = str('%0.1fKm / %0.1fMi' %(proxlist[0][0],proxlist[0][1]))
     # print to display
     with canvas(device) as draw:
