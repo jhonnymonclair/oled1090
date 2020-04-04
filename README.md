@@ -118,6 +118,6 @@ lon2 = radians(MyLongitude)
 ```
 proximity = 20
 ```
-- save the changes (Ctrl-X) 
+- save the changes and exit (Ctrl-O)(Ctrl-X) 
 - reboot
 
