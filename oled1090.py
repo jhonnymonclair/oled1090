@@ -82,13 +82,14 @@ while True:
             distance = R * c
             # calculate miles
             miles = distance * conv_fac
-            # store values
+            # if below proximity limit, put in list
             if distance < proximity:
                 list = []
                 list.append(distance)
                 list.append(miles)
                 list.append(iter)
                 proxlist.append(list)
+            # store farthest
             if distance > record:
                 record = distance
                 now = datetime.now()
@@ -104,6 +105,7 @@ while True:
                 line3 = plane + " " + altitude + "Ft"
                 line4 = str('%0.1fKm / %0.1fMi' %(distance,miles))
                 line5 = dt_string
+    # if list is not empty, choose the closer one
     if len(proxlist) > 0:
         proxlist.sort()
         ind = proxlist[0][2]
@@ -115,7 +117,10 @@ while True:
             altitude = str(data['aircraft'][ind]['alt_baro'])
         else:
             altitude = "..."
-        line1 = plane + " " + altitude + "Ft"
+        if altitude == "ground":
+            line1 = plane + " " + altitude
+        else:
+            line1 = plane + " " + altitude + "Ft"
         line2 = str('%0.1fKm / %0.1fMi' %(proxlist[0][0],proxlist[0][1]))
     # print to display
     with canvas(device) as draw:
