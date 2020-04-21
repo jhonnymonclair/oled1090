@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+###################################################
+##
+##  oled1090.py
+##  Dump1090 data on Oled micro display
+##
+###################################################
+
 from math import sin, cos, sqrt, atan2, radians
 from datetime import datetime
 import time
