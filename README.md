@@ -89,7 +89,7 @@ chmod 755 oled1090.py
 - enable system to start the program at boot:
 ```
 sudo cp oled1090.service /lib/systemd/system
-sudo systemctl enable oled1090.service
+sudo systemctl enable oled1090
 ```
 
 
