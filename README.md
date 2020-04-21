@@ -80,10 +80,11 @@ sudo -H pip3 install --upgrade luma.oled
 Install the program
 -------
 
-- copy the repository: 
+- copy the repository and set program as executable: 
 ```
 git clone https://github.com/jhonnymonclair/oled1090.git
 cd oled1090
+chmod 755 oled1090.py
 ```
 - enable system to start the program at boot:
 ```
