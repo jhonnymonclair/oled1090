@@ -4,7 +4,7 @@
 
 [Service]
  Type=simple
- ExecStart=/usr/bin/python3 /home/pi/oled1090/oled1090.py
+ ExecStart=/home/pi/oled1090/oled1090.py
  Restart=on-failure
  RestartSec=30
 
