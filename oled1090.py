@@ -13,7 +13,7 @@ import urllib.request
 import json
 
 from luma.core.interface.serial import i2c
-from luma.oled.device import ssd1306
+from luma.oled.device import ssd1306, sh1106
 from luma.core.render import canvas
 from PIL import Image, ImageDraw, ImageFont
 
